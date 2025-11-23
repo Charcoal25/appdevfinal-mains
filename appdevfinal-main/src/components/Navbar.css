@@ -1,0 +1,55 @@
+.navbar-container {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping if needed, but horizontally */
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem; /* reduced gap for smaller screens */
+  background: rgb(255, 165, 0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.94);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  margin: 0 auto 1rem;
+  max-width: 100%;
+  width: auto;
+}
+
+.navbar-button {
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: transparent;
+  color: #333;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* prevent text from breaking */
+}
+
+.navbar-button.selected {
+  background: rgb(166, 138, 0);
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-button:hover:not(.selected) {
+  background: rgba(166, 138, 0, 0.28);
+}
+
+/* Optional: Adjust padding on smaller screens to avoid overflow */
+@media (max-width: 480px) {
+  .navbar {
+    gap: 0rem;
+    padding: 0.50rem;
+  }
+
+  .navbar-button {
+    padding: 6px 10px;
+    font-size: 0.5rem;
+  }
+}

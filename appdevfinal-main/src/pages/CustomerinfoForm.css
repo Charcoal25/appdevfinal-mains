@@ -1,0 +1,181 @@
+.customer-form-container h2 {
+  text-align: center;
+}
+
+/* Form Group Container */
+.customer-form-group {
+  margin-bottom: 1rem;
+}
+
+/* Label Styling */
+.customer-form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+/* Input and Button Horizontal Wrapper */
+.customer-form-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+}
+
+/* Text Field Input */
+.customer-form-input-wrapper input {
+  flex: 1;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* CLEAR Button */
+.customer-form-input-wrapper button {
+  padding: 0.4rem 0.6rem;
+  background-color: rgb(166, 138, 0);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+  height: auto;
+  white-space: nowrap;
+}
+
+.customer-form-input-wrapper button:hover {
+  background-color: rgba(251, 210, 4, 0.934);
+}
+
+/* Validation Error Text */
+.error-text {
+  color: red;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+/* Buttons Under Form */
+.customer-form-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.customer-form-buttons button {
+  padding: 0.5rem 1rem;
+  background-color: rgb(166, 138, 0);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.customer-form-buttons button:hover {
+  background-color: rgba(251, 210, 4, 0.934);
+}
+
+/* Status Message */
+.submit-status {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* \src\pages\CustomerInfoForm.css */
+.customer-form-buttons button:disabled {
+  background-color: #888;           /* gray out */
+  color: #ddd;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.submit-success {
+  text-align: justify;
+  max-width: 600px;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: #2e7d32;
+  line-height: 1.6;
+}
+
+/* Lightbox modal background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Modal box */
+.modal-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  color: #333;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+
+  /* 👇 make it scale on smaller screens */
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modal scrollable content */
+.modal-content {
+  flex: 1;                  /* 👈 let it take remaining height */
+  max-height: 60vh;         /* 👈 prevent it from going out of screen */
+  overflow-y: auto;
+  margin-top: 10px;
+  padding-right: 5px;
+}
+
+/* Terms + Checkbox wrapper */
+.terms-wrapper {
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+
+.terms-container {
+  display: flex;
+  align-items: flex-start;   /* align checkbox with top of first text line */
+  gap: 8px;
+}
+
+.terms-container label {
+  white-space: normal;       /* allow wrapping */
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* RESPONSIVE TWEAKS */
+@media (max-width: 600px) {
+  .modal-box {
+    width: 95%;        /* 👈 fill more width */
+    padding: 15px;     /* 👈 smaller padding */
+    max-height: 85vh;  /* 👈 slightly taller for phones */
+  }
+
+  .modal-content {
+    max-height: 55vh;  /* 👈 adjust scroll area */
+    font-size: 0.9rem; /* 👈 smaller text */
+  }
+
+  .terms-container label {
+    font-size: 0.85rem; /* 👈 readable but compact */
+    line-height: 1.4;
+  }
+}

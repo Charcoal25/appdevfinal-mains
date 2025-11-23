@@ -1,0 +1,202 @@
+/* Navbar */
+.home-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: #f1eee3;
+}
+
+.home-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.home-navbar-logo img {
+  height: 40px;
+}
+
+.home-navbar-logo span {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #201f1e;
+}
+
+.home-navbar-links {
+  display: flex;
+  gap: 2rem;
+  font-weight: bold;
+}
+
+.home-navbar-links a {
+  color: #201f1e;
+  text-decoration: none;
+}
+
+.home-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home-navbar-right .cart-button {
+  background-color: #014440;
+  color: #fbf9f5;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+.home-navbar-right .cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: #fff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HERO IMAGE */
+.home-hero {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 0 2rem; /* leaves space on left and right */
+}
+
+.home-hero img {
+  width: 100%;          /* full width minus padding */
+  max-width: 1600px;    /* optional: limit how wide on large screens */
+  height: 530px;         /* reduced height */
+  object-fit: cover;    /* keeps aspect ratio and fills area */
+  border-radius: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-hero h1 {
+  font-size: 2.5rem;
+  margin-top: 6rem;   /* add spacing below image */
+}
+
+.home-hero p {
+  font-size: 1.3rem;    /* slightly bigger text */
+  margin-top: -1rem;
+}
+
+
+/* Category selection section */
+.category-section {
+  display: flex;
+  justify-content: center; /* center all categories horizontally */
+  flex-wrap: nowrap;       /* prevent wrapping to next line */
+  gap: 3rem;               /* space between cards */
+  margin: 3rem auto;
+  width: 95%;
+  max-width: 1200px;
+}
+
+  .category-wrapper-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.category-wrapper-link:hover .category-card {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* Each category wrapper */
+.category-wrapper {
+  display: flex;
+  flex-direction: column; /* image on top, text below */
+  align-items: center;
+}
+
+/* Card with shadow for the image */
+.category-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f1eee3;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  width: 220px;
+  height: 220px;
+  transition: transform 0.3s ease;
+}
+
+.category-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+}
+
+/* Text below the card */
+.category-name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+
+
+.why-section-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.why-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5rem;
+  width: 110%;
+}
+
+.why-item {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.why-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: -1rem;
+}
+
+.why-title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.why-description {
+  font-size: 1.3rem;
+  color: #201f1e;
+  margin: 0;
+  padding-bottom: 30%;
+}

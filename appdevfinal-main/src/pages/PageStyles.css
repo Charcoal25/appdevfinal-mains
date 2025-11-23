@@ -1,0 +1,91 @@
+/* \src\pages\PageStyles.css */
+
+/* Reset and base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #014440;                /* text color same as Home */
+  background-color: #fbf9f5;     /* main background color same as Home */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Home page specific background */
+body.home-bg {
+  background-image: url("../assets/homebg2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+  background-attachment: fixed;
+}
+
+/* Overlay for blur and darkening effect */
+body.home-bg::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(251, 249, 245, 0.8); /* match Home background overlay */
+  backdrop-filter: blur(3px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* About Us page background */
+body.aboutus-bg {
+  background-color: #fbf9f5; /* Home page background */
+  color: #014440;             /* Home page text color */
+}
+
+/* Contact page background */
+body.contact-bg {
+  background-color: #fbf9f5;
+  color: #014440;
+}
+
+/* Common content container for pages */
+.page-content-container {
+  background-color: #ffffff;       /* light card background */
+  border-radius: 16px;             /* curved corners */
+  padding: 40px 30px;
+  max-width: 1200px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* soft shadow */
+  color: #014440;                  /* Home page text color */
+  width: 95%;
+}
+
+/* Headings inside content container */
+.page-content-container h1,
+.page-content-container h2,
+.page-content-container h3 {
+  color: "#201f1e"; /* Home page orange highlights */
+  margin-bottom: 1rem;
+}
+
+/* Paragraphs */
+.page-content-container p {
+  color: #014440;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .page-content-container {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-content-container {
+    padding: 20px 16px;
+    margin: 20px auto;
+    width: 95%;
+  }
+}
